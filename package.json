@@ -13,7 +13,6 @@
   "scripts": {
     "start": "web-ext run -i=$npm_package_config_ignore --bc --url about:debugging#addons",
     "test": "node --experimental-vm-modules node_modules/.bin/jest",
-    "coverage": "codecov",
     "lint": "eslint src/ rules/*.json _locales/*/*.json && web-ext lint -i=$npm_package_config_ignore -w",
     "lint-build": "addons-linter --warnings-as-errors web-ext-artifacts/request_control-$(node -p \"require('./manifest.json').version\").zip",
     "copy-tldts": "cp -v node_modules/tldts-experimental/dist/index.esm.min.js lib/tldts/",
@@ -30,7 +29,6 @@
   },
   "devDependencies": {
     "addons-linter": "^3.9.0",
-    "codecov": "^3.8.3",
     "eslint": "^7.30.0",
     "eslint-config-problems": "^5.0.0",
     "eslint-plugin-import": "^2.23.4",
