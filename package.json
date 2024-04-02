@@ -30,7 +30,7 @@
     "tldts-experimental": "^5.7.112"
   },
   "devDependencies": {
-    "addons-linter": "^3.23.0",
+    "addons-linter": "^6.25.0",
     "eslint": "^7.32.0",
     "eslint-config-problems": "^5.0.0",
     "eslint-plugin-import": "^2.29.1",
@@ -42,7 +42,7 @@
     "eslint-plugin-simple-import-sort": "^7.0.0",
     "eslint-plugin-unicorn": "^34.0.1",
     "jest": "^27.5.1",
-    "web-ext": "^6.8.0"
+    "web-ext": "^7.11.0"
   },
   "jest": {
     "testEnvironment": "jsdom",
