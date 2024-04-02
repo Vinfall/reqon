@@ -28,32 +28,31 @@ Other useful information:
 
 ## Development
 
-Clone repository and setup development environment with
-[pnpm](https://pnpm.io):
+Clone repository and setup development environment with npm:
 
 ```sh
 git clone https://github.com/tumpio/requestcontrol.git
 cd requestcontrol
-pnpm i
+npm i
 ```
 
 Run in Firefox-nightly:
 
 ```sh
-pnpm start -- --firefox=nightly
+npm start -- --firefox=nightly
 ```
 
 Run unit tests and lint:
 
 ```sh
-pnpm test
-pnpm run lint
+npm test
+npm run lint
 ```
 
 Build extension:
 
 ```sh
-pnpm run build
+npm run build
 ```
 
 ## External Libraries
