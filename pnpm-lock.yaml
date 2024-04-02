@@ -9,36 +9,36 @@ dependencies:
     specifier: ^1.1.0
     version: 1.1.0
   tldts-experimental:
-    specifier: ^5.7.38
+    specifier: ^5.7.112
     version: 5.7.112
 
 devDependencies:
   addons-linter:
-    specifier: ^3.9.0
+    specifier: ^3.23.0
     version: 3.23.0(@types/download@8.0.1)(download@8.0.0)(safe-compare@1.1.4)
   eslint:
-    specifier: ^7.30.0
+    specifier: ^7.32.0
     version: 7.32.0
   eslint-config-problems:
     specifier: ^5.0.0
     version: 5.0.0(eslint@7.32.0)
   eslint-plugin-import:
-    specifier: ^2.23.4
+    specifier: ^2.29.1
     version: 2.29.1(eslint@7.32.0)
   eslint-plugin-jest:
-    specifier: ^24.3.6
+    specifier: ^24.7.0
     version: 24.7.0(eslint@7.32.0)(typescript@5.4.3)
   eslint-plugin-json:
-    specifier: ^3.0.0
+    specifier: ^3.1.0
     version: 3.1.0
   eslint-plugin-no-unsanitized:
-    specifier: ^3.1.5
+    specifier: ^3.2.0
     version: 3.2.0(eslint@7.32.0)
   eslint-plugin-node:
     specifier: ^11.1.0
     version: 11.1.0(eslint@7.32.0)
   eslint-plugin-promise:
-    specifier: ^5.1.0
+    specifier: ^5.2.0
     version: 5.2.0(eslint@7.32.0)
   eslint-plugin-simple-import-sort:
     specifier: ^7.0.0
@@ -47,10 +47,10 @@ devDependencies:
     specifier: ^34.0.1
     version: 34.0.1(eslint@7.32.0)
   jest:
-    specifier: ^27.0.6
+    specifier: ^27.5.1
     version: 27.5.1
   web-ext:
-    specifier: ^6.2.0
+    specifier: ^6.8.0
     version: 6.8.0(@types/download@8.0.1)(download@8.0.0)(safe-compare@1.1.4)
 
 packages:
