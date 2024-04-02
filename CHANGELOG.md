@@ -5,6 +5,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+## [2.0.0] - Apr. 2, 2024
+- Numerous fixes & new bugs.
+
+## [1.16.0a1] - Dec. 24, 2021
 - Add option to remove toolbar icon counter. #129
 - Add support for matching hostnames without suffix (TLD wildcard). #126
 - Add private browsing matcher to ignore or only use in private browsing.
