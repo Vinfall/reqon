@@ -17,7 +17,7 @@ devDependencies:
     specifier: ^3.9.0
     version: 3.23.0(@types/download@8.0.1)(download@8.0.0)(safe-compare@1.1.4)
   codecov:
-    specifier: ^3.8.2
+    specifier: ^3.8.3
     version: 3.8.3
   eslint:
     specifier: ^7.30.0
