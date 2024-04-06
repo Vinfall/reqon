@@ -611,13 +611,13 @@ function isProbablyIpv4(hostname) {
     let numberOfDots = 0;
     if (
         hostname.length < 7 ||
-        !isDigitCode(hostname.charCodeAt(0)) ||
-        !isDigitCode(hostname.charCodeAt(hostname.length - 1))
+        !isDigitCode(hostname.codePointAt(0)) ||
+        !isDigitCode(hostname.codePointAt(hostname.length - 1))
     ) {
         return false;
     }
     for (let i = 1; i < hostname.length - 1; i += 1) {
-        const code = hostname.charCodeAt(i);
+        const code = hostname.codePointAt(i);
         if (code === 46) {
             numberOfDots += 1;
         } else if (!isDigitCode(code)) {
@@ -626,6 +626,7 @@ function isProbablyIpv4(hostname) {
     }
     return numberOfDots === 3;
 }
+
 
 function isDigitCode(c) {
     return c >= 48 && c <= 57;
