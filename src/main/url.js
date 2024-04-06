@@ -2,7 +2,10 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
-import { getDomain, parse } from "../../lib/tldts/index.esm.min.js";
+import {
+    getDomain,
+    parse
+} from "../../lib/tldts/index.esm.min.js";
 
 export const libTld = {
     getDomain(url) {
@@ -38,12 +41,18 @@ export class UrlParser {
     }
 
     get protocol() {
-        const { start, end } = getSchemeStartEnd(this.url);
+        const {
+            start,
+            end
+        } = getSchemeStartEnd(this.url);
         return this.url.slice(start, end);
     }
 
     set protocol(value) {
-        const { start, end } = getSchemeStartEnd(this.url);
+        const {
+            start,
+            end
+        } = getSchemeStartEnd(this.url);
         if (value.endsWith(":")) {
             this.url = this.url.slice(0, start) + value + this.url.slice(end);
         } else {
@@ -52,7 +61,10 @@ export class UrlParser {
     }
 
     get username() {
-        const { start, end } = getAuthStartEnd(this.url);
+        const {
+            start,
+            end
+        } = getAuthStartEnd(this.url);
         const auth = this.url.slice(start, end);
         const i = auth.indexOf(":");
         if (i === -1) {
@@ -62,7 +74,10 @@ export class UrlParser {
     }
 
     set username(value) {
-        const { start, end } = getAuthStartEnd(this.url);
+        const {
+            start,
+            end
+        } = getAuthStartEnd(this.url);
         const auth = this.url.slice(start, end);
         let newAuth = value;
         const i = auth.indexOf(":");
@@ -77,7 +92,10 @@ export class UrlParser {
     }
 
     get password() {
-        const { start, end } = getAuthStartEnd(this.url);
+        const {
+            start,
+            end
+        } = getAuthStartEnd(this.url);
         const auth = this.url.slice(start, end);
         const i = auth.indexOf(":");
         if (i === -1) {
@@ -87,7 +105,10 @@ export class UrlParser {
     }
 
     set password(value) {
-        const { start, end } = getAuthStartEnd(this.url);
+        const {
+            start,
+            end
+        } = getAuthStartEnd(this.url);
         const auth = this.url.slice(start, end);
         if (auth.length > 0) {
             const [user] = auth.slice(0, -1).split(":", 2);
@@ -100,12 +121,18 @@ export class UrlParser {
     }
 
     get host() {
-        const { start, end } = getHostStartEnd(this.url);
+        const {
+            start,
+            end
+        } = getHostStartEnd(this.url);
         return this.url.slice(start, end);
     }
 
     set host(value) {
-        const { start, end } = getHostStartEnd(this.url);
+        const {
+            start,
+            end
+        } = getHostStartEnd(this.url);
         this.url = this.url.slice(0, start) + value + this.url.slice(end);
     }
 
@@ -114,17 +141,26 @@ export class UrlParser {
     }
 
     set hostname(value) {
-        const { start, end } = getHostnameStartEnd(this.url);
+        const {
+            start,
+            end
+        } = getHostnameStartEnd(this.url);
         this.url = this.url.slice(0, start) + value + this.url.slice(end);
     }
 
     get port() {
-        const { start, end } = getPortStartEnd(this.url);
+        const {
+            start,
+            end
+        } = getPortStartEnd(this.url);
         return this.url.slice(start, end);
     }
 
     set port(value) {
-        const { start, end } = getPortStartEnd(this.url);
+        const {
+            start,
+            end
+        } = getPortStartEnd(this.url);
         if (value.startsWith(":")) {
             this.url = this.url.slice(0, start) + value + this.url.slice(end);
         } else {
@@ -133,7 +169,10 @@ export class UrlParser {
     }
 
     get pathname() {
-        const { start, end } = getPathStartEnd(this.url);
+        const {
+            start,
+            end
+        } = getPathStartEnd(this.url);
         if (start === end) {
             return "/";
         }
@@ -141,7 +180,10 @@ export class UrlParser {
     }
 
     set pathname(value) {
-        const { start, end } = getPathStartEnd(this.url);
+        const {
+            start,
+            end
+        } = getPathStartEnd(this.url);
         if (value.startsWith("/")) {
             this.url = this.url.slice(0, start) + value + this.url.slice(end);
         } else {
@@ -150,12 +192,18 @@ export class UrlParser {
     }
 
     get search() {
-        const { start, end } = getSearchStartEnd(this.url);
+        const {
+            start,
+            end
+        } = getSearchStartEnd(this.url);
         return this.url.slice(start, end);
     }
 
     set search(value) {
-        const { start, end } = getSearchStartEnd(this.url);
+        const {
+            start,
+            end
+        } = getSearchStartEnd(this.url);
         if (value === "") {
             this.url = this.url.slice(0, start) + this.url.slice(end);
         } else if (value.startsWith("?")) {
@@ -227,7 +275,10 @@ export class QueryParser extends UrlParser {
             return;
         }
         start += key.length + 1;
-        return { start, end: this.getValueEnd(start) };
+        return {
+            start,
+            end: this.getValueEnd(start)
+        };
     }
 
     get(key) {
@@ -269,7 +320,10 @@ export class QueryParser extends UrlParser {
 export const URL_PARAMETERS = Object.getOwnPropertyNames(UrlParser.prototype).filter((x) => x !== "constructor");
 
 function extractHostname(url) {
-    const { start, end } = getHostnameStartEnd(url);
+    const {
+        start,
+        end
+    } = getHostnameStartEnd(url);
     return url.slice(start, end);
 }
 
@@ -299,7 +353,10 @@ function getHostnameStartEnd(url) {
         for (; i < url.length; i++) {
             if (url.charAt(i) === "]") {
                 hostname_end = i + 1;
-                return { start: hostname_begin, end: hostname_end };
+                return {
+                    start: hostname_begin,
+                    end: hostname_end
+                };
             }
         }
     }
@@ -322,7 +379,10 @@ function getHostnameStartEnd(url) {
                 for (; i < url.length; i++) {
                     if (url.charAt(i) === "]") {
                         hostname_end = i + 1;
-                        return { start: hostname_begin, end: hostname_end };
+                        return {
+                            start: hostname_begin,
+                            end: hostname_end
+                        };
                     }
                 }
             }
@@ -334,13 +394,21 @@ function getHostnameStartEnd(url) {
             port = true;
         }
     }
-    return { start: hostname_begin, end: hostname_end };
+    return {
+        start: hostname_begin,
+        end: hostname_end
+    };
 }
 
 function getPortStartEnd(url) {
-    const { end: start } = getHostnameStartEnd(url);
+    const {
+        end: start
+    } = getHostnameStartEnd(url);
     if (url.charAt(start) !== ":") {
-        return { start, end: start };
+        return {
+            start,
+            end: start
+        };
     }
     let end = start + 1;
     for (; end < url.length; end++) {
@@ -348,13 +416,22 @@ function getPortStartEnd(url) {
             break;
         }
     }
-    return { start, end };
+    return {
+        start,
+        end
+    };
 }
 
 function getHostStartEnd(url) {
-    const { start, end: hostnameEnd } = getHostnameStartEnd(url);
+    const {
+        start,
+        end: hostnameEnd
+    } = getHostnameStartEnd(url);
     if (url.charAt(hostnameEnd) !== ":") {
-        return { start, end: hostnameEnd };
+        return {
+            start,
+            end: hostnameEnd
+        };
     }
     let end = start + 1;
     for (; end < url.length; end++) {
@@ -362,58 +439,97 @@ function getHostStartEnd(url) {
             break;
         }
     }
-    return { start, end };
+    return {
+        start,
+        end
+    };
 }
 
 function getAuthStartEnd(url) {
-    const { start: hostStart } = getHostnameStartEnd(url);
+    const {
+        start: hostStart
+    } = getHostnameStartEnd(url);
     if (url.charAt(hostStart - 1) !== "@") {
-        return { start: hostStart, end: hostStart };
+        return {
+            start: hostStart,
+            end: hostStart
+        };
     }
-    const { end: schemeEnd } = getProtocolStartEnd(url);
-    return { start: schemeEnd, end: hostStart };
+    const {
+        end: schemeEnd
+    } = getProtocolStartEnd(url);
+    return {
+        start: schemeEnd,
+        end: hostStart
+    };
 }
 
 function getPathStartEnd(url) {
-    const { end: protocolEnd } = getProtocolStartEnd(url);
+    const {
+        end: protocolEnd
+    } = getProtocolStartEnd(url);
     const start = url.indexOf("/", protocolEnd);
     let end = url.length;
     if (start === -1) {
-        return { start: end, end };
+        return {
+            start: end,
+            end
+        };
     }
     for (end = start + 1; end < url.length; end++) {
         if (url.charAt(end) === "?" || url.charAt(end) === "#") {
             break;
         }
     }
-    return { start, end };
+    return {
+        start,
+        end
+    };
 }
 
 function getSchemeStartEnd(url) {
     const start = 0;
     const end = url.indexOf("://");
     if (end === -1) {
-        return { start, end: start };
+        return {
+            start,
+            end: start
+        };
     }
-    return { start, end: end + 1 };
+    return {
+        start,
+        end: end + 1
+    };
 }
 
 function getProtocolStartEnd(url) {
     const start = 0;
     const end = url.indexOf("://");
     if (end === -1) {
-        return { start, end: start };
+        return {
+            start,
+            end: start
+        };
     }
-    return { start, end: end + 3 };
+    return {
+        start,
+        end: end + 3
+    };
 }
 
 function getSearchStartEnd(url) {
     const start = url.indexOf("?");
     const end = getHashStart(url);
     if (start === -1) {
-        return { start: end, end };
+        return {
+            start: end,
+            end
+        };
     }
-    return { start, end };
+    return {
+        start,
+        end
+    };
 }
 
 function getHashStart(url) {
