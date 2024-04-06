@@ -1,6 +1,6 @@
 {
   "extensionName": {
-    "message": "Request Control"
+    "message": "Reqon"
   },
   "extensionDescription": {
     "message": "Define reglas para controlar peticiones HTTP."
@@ -167,22 +167,22 @@
     "message": "Other"
   },
   "options_title": {
-    "message": "Reglas de Request Control"
+    "message": "Reglas de Reqon"
   },
   "options_description": {
     "message": "Define reglas para controlar peticiones HTTP"
   },
   "settings_title": {
-    "message": "Configuración de Request Control"
+    "message": "Configuración de Reqon"
   },
   "manual_title": {
-    "message": "Manual de Request Control"
+    "message": "Manual de Reqon"
   },
   "manual": {
     "message": "Manual"
   },
   "about_title": {
-    "message": "Acerca de Request Control"
+    "message": "Acerca de Reqon"
   },
   "about": {
     "message": "Acerca de"
@@ -374,7 +374,7 @@
     "message": "Licencia"
   },
   "license_clause": {
-    "message": "Request Control está licenciado bajo Mozilla Public License v2.0. Hay disponible una copia de la MPL en"
+    "message": "Reqon está licenciado bajo Mozilla Public License v2.0. Hay disponible una copia de la MPL en"
   },
   "donate": {
     "message": "Donar"
@@ -435,9 +435,9 @@
     }
   },
   "enable_rules": {
-    "message": "Habilitar Request Control"
+    "message": "Habilitar Reqon"
   },
   "disable_rules": {
-    "message": "Deshabilitar Request Control"
+    "message": "Deshabilitar Reqon"
   }
 }

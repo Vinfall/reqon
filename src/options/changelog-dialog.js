@@ -43,7 +43,7 @@ async function fetchChangelog() {
                 if (text[i].startsWith("#")) {
                     const link = document.createElement("a");
                     link.textContent = text[i];
-                    link.href = `https://github.com/tumpio/requestcontrol/issues/${text[i].substring(1)}`;
+                    link.href = `https://github.com/Vinfall/reqon/issues/${text[i].substring(1)}`;
                     link.target = "_blank";
                     li.append(link);
                 } else if (text[i].startsWith("@")) {

@@ -1,6 +1,6 @@
 {
   "extensionName": {
-    "message": "Request Control"
+    "message": "Reqon"
   },
   "extensionDescription": {
     "message": "Define rules for controlling HTTP requests."
@@ -83,7 +83,7 @@
     "message": "New Rule"
   },
   "rule_description_new": {
-    "message": "Create a new request control rule by defining its pattern, types and action."
+    "message": "Create a new Reqon rule by defining its pattern, types and action."
   },
   "rule_title_hosts": {
     "message": "$HOSTS$ and $NUM$ other",
@@ -195,22 +195,22 @@
     "message": "Other"
   },
   "options_title": {
-    "message": "Request Control - Rules"
+    "message": "Reqon - Rules"
   },
   "imports_title": {
-    "message": "Request Control - Imports"
+    "message": "Reqon - Imports"
   },
   "settings_title": {
-    "message": "Request Control - Settings"
+    "message": "Reqon - Settings"
   },
   "manual_title": {
-    "message": "Request Control - Manual"
+    "message": "Reqon - Manual"
   },
   "manual": {
     "message": "Manual"
   },
   "about_title": {
-    "message": "About Request Control"
+    "message": "About Reqon"
   },
   "about": {
     "message": "About"
@@ -495,7 +495,7 @@
     "message": "License"
   },
   "license_clause": {
-    "message": "Request Control is licensed under the Mozilla Public License v2.0. A copy of the MPL is available in"
+    "message": "Reqon is licensed under the Mozilla Public License v2.0. A copy of the MPL is available in"
   },
   "browse_file": {
     "message": "Browse..."
@@ -559,10 +559,10 @@
     }
   },
   "enable_rules": {
-    "message": "Enable Request Control"
+    "message": "Enable Reqon"
   },
   "disable_rules": {
-    "message": "Disable Request Control"
+    "message": "Disable Reqon"
   },
   "log_whitelisted_requests": {
     "message": "Log whitelisted requests"

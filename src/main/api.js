@@ -116,7 +116,7 @@ export function createRule(data) {
 
 /**
  * Construct array of match patterns
- * @param pattern pattern of request control rule
+ * @param pattern pattern of Reqon rule
  * @returns {*} array of match patterns
  */
 export function createMatchPatterns(pattern) {

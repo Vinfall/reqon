@@ -1,6 +1,6 @@
 {
   "extensionName": {
-    "message": "Request Control"
+    "message": "Reqon"
   },
   "extensionDescription": {
     "message": "定义规则，控制 HTTP 请求。"
@@ -195,16 +195,16 @@
     "message": "管理规则"
   },
   "settings_title": {
-    "message": "Request Control 设置"
+    "message": "Reqon 设置"
   },
   "manual_title": {
-    "message": "Request Control 手册"
+    "message": "Reqon 手册"
   },
   "manual": {
     "message": "手册"
   },
   "about_title": {
-    "message": "关于 Request Control"
+    "message": "关于 Reqon"
   },
   "about": {
     "message": "关于"
@@ -474,7 +474,7 @@
     "message": "许可协议"
   },
   "license_clause": {
-    "message": "Request Control 依照 Mozilla Public License v2.0 授权。MPL 许可协议的副本见"
+    "message": "Reqon 依照 Mozilla Public License v2.0 授权。MPL 许可协议的副本见"
   },
   "browse_file": {
     "message": "浏览..."
@@ -538,10 +538,10 @@
     }
   },
   "enable_rules": {
-    "message": "启用 Request Control"
+    "message": "启用 Reqon"
   },
   "disable_rules": {
-    "message": "禁用 Request Control"
+    "message": "禁用 Reqon"
   },
   "log_whitelisted_requests": {
     "message": "记录被白名单的请求"

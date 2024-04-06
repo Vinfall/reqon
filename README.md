@@ -1,4 +1,4 @@
-[![BuildStatus](https://github.com/tumpio/requestcontrol/workflows/Build/badge.svg?event=push&branch=master)](https://github.com/tumpio/requestcontrol/actions)
+[![BuildStatus](https://github.com/Vinfall/reqon/workflows/Build/badge.svg?event=push&branch=master)](https://github.com/Vinfall/reqon/actions)
 
 # Reqon (fork of *Request Control*)
 
@@ -8,23 +8,23 @@ API for HTTP request management.
 
 Requests can be controlled with following rules:
 - Filter Rule: Skip URL redirection and remove URL query parameters.
-- Redirect Rule: Rewrite requests with support for [Pattern Capturing](https://github.com/tumpio/requestcontrol/blob/master/_locales/en/manual.wiki#redirect-using-pattern-capturing) to redirect based on the original request.
+- Redirect Rule: Rewrite requests with support for [Pattern Capturing](https://github.com/Vinfall/reqon/blob/master/_locales/en/manual.wiki#redirect-using-pattern-capturing) to redirect based on the original request.
 - Secure Rule: Upgrade non-secure (HTTP) requests to secure (HTTPS).
 - Block Rule: Block requests before they are made.
 - Whitelist Rule: Whitelist requests from other rules.
 
 Other useful information:
-- [Manual](https://github.com/tumpio/requestcontrol/blob/master/_locales/en/manual.wiki)
-- [FAQ](https://github.com/tumpio/requestcontrol/issues?utf8=%E2%9C%93&q=label%3Aquestion+)
-- [Source code](https://github.com/tumpio/requestcontrol)
+- [Manual](https://github.com/Vinfall/reqon/blob/master/_locales/en/manual.wiki)
+- [FAQ](https://github.com/Vinfall/reqon/issues?utf8=%E2%9C%93&q=label%3Aquestion+)
+- [Source code](https://github.com/Vinfall/reqon)
 - [License](./LICENSE)
 
 ## Support
 
-- Report bugs
-- Suggest new features
-- Help to translate
-- Contribute
+- Bug Report
+- Feature Suggestion
+- Localization
+- Code Contribution
 
 ## Todo
 
@@ -40,8 +40,8 @@ Other useful information:
 Clone repository and setup development environment with npm:
 
 ```sh
-git clone https://github.com/Vinfall/requestcontrol.git
-cd requestcontrol
+git clone https://github.com/Vinfall/reqon.git
+cd reqon
 npm i
 ```
 
@@ -66,7 +66,7 @@ npm run build
 
 ## External Libraries
 
-Request Control uses the following external libraries:
+Reqon uses the following external libraries:
 
 - [lit](https://ajusa.github.io/lit/) is licensed under the MIT license.
 - [tags-input](https://github.com/developit/tags-input) and its fork by [\@pirxpilot](https://github.com/pirxpilot/tags-input) are licensed under the MIT license.

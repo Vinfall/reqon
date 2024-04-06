@@ -1,11 +1,11 @@
 {
-  "name": "requestcontrol",
+  "name": "reqon",
   "license": "MPL-2.0",
   "private": true,
   "type": "module",
   "repository": {
     "type": "git",
-    "value": "git+https://github.com/tumpio/requestcontrol.git"
+    "value": "git+https://github.com/Vinfall/reqon.git"
   },
   "config": {
     "ignore": "test/ coverage/ README* **/manual.wiki package*.json"

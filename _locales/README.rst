@@ -1,4 +1,4 @@
-Translating Request Control
+Translating Reqon
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To begin translation copy **en** folder and its content to a new

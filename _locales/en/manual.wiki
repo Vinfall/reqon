@@ -1,8 +1,8 @@
-= Request Control Manual =
+= Reqon Manual =
 
-== Request Control Rule ==
+== Reqon Rule ==
 
-Request Control Rule consists of [[#pattern|Pattern]], [[#types|Types]] and [[#action|Action]].
+Reqon Rule consists of [[#pattern|Pattern]], [[#types|Types]] and [[#action|Action]].
 
 Requests that match a pattern and types of an active rule will be intercepted taking the action of the rule.
 

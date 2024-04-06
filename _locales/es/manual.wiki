@@ -1,8 +1,8 @@
-= Manual de Request Control =
+= Manual de Reqon =
 
-== Regla de Request Control ==
+== Regla de Reqon ==
 
-Una regla de Request Control consiste en [[#patrón|Patrón]], [[#tipos|Tipos]] y [[#acción|Acción]].
+Una regla de Reqon consiste en [[#patrón|Patrón]], [[#tipos|Tipos]] y [[#acción|Acción]].
 
 Las peticiones que coinciden con un patrón y los tipos de una regla activa serán interceptados tomando la acción de la regla.
 
