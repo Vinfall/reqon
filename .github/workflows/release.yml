@@ -1,7 +1,8 @@
 name: Release
 on:
   push:
-    tags: 1.*
+    tags:
+      - v3.*
 
 jobs:
   release:
@@ -20,17 +21,17 @@ jobs:
       - run: npm test
       - run: npm run build
       - run: npm run lint-build
-      
+
       - uses: ffurrer2/extract-release-notes@v1
         id: extract_notes
-      
+
       - uses: softprops/action-gh-release@v1
         with:
           files: web-ext-artifacts/*.zip
           body: ${{ steps.extract_notes.outputs.release_notes }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      
+
       - run: npm run deploy
         env:
           WEB_EXT_CHANNEL: listed
