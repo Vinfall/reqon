@@ -26,6 +26,15 @@ Other useful information:
 - Help to translate
 - Contribute
 
+## Todo
+
+- [ ] Update packages & fix vulnerabilities (WIP)
+- [ ] Remove deprecated packages & move to alternatives
+- [ ] Rebase on latest submodules
+- [ ] Merge more PR
+- [ ] Rebrand to avoid confusion (WIP)
+- [ ] Sign extension to surpress Firefox warning
+
 ## Development
 
 Clone repository and setup development environment with npm:
