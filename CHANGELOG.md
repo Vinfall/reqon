@@ -6,8 +6,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.4.1] - Apr. 6, 2024
+- Rename to reqon.
+- Fix jest test error.
+
+## [3.3.0] - Apr. 2, 2024
+- Update dependencies.
+
 ## [2.0.0] - Apr. 2, 2024
-- Numerous fixes & new bugs.
+- Introduce numerous fixes & new bugs.
 
 ## [1.16.0a1] - Dec. 24, 2021
 - Add option to remove toolbar icon counter. #129

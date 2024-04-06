@@ -32,7 +32,7 @@ Other useful information:
 - [ ] Remove deprecated packages & move to alternatives
 - [ ] Rebase on latest submodules
 - [ ] Merge more PR
-- [ ] Rebrand to avoid confusion
+- [ ] Rebrand to avoid confusion (WIP)
 - [ ] Sign extension to surpress Firefox warning
 
 ## Development
