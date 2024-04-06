@@ -430,7 +430,7 @@
     "message": "Back to top"
   },
   "export-file-name": {
-    "message": "request-control-rules.json"
+    "message": "reqon-rules.json"
   },
   "export_selected": {
     "message": "Export selected"
