@@ -1,6 +1,6 @@
 [![BuildStatus](https://github.com/tumpio/requestcontrol/workflows/Build/badge.svg?event=push&branch=master)](https://github.com/tumpio/requestcontrol/actions)
 
-# Request Control - Firefox extension
+# Reqon (fork of *Request Control*)
 
 An extension to control HTTP requests. Provides front-end for Firefox
 [webRequest.onBeforeRequest](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/API/webRequest/onBeforeRequest)
@@ -26,12 +26,21 @@ Other useful information:
 - Help to translate
 - Contribute
 
+## Todo
+
+- [ ] Update packages & fix vulnerabilities (WIP)
+- [ ] Remove deprecated packages & move to alternatives
+- [ ] Rebase on latest submodules
+- [ ] Merge more PR
+- [ ] Rebrand to avoid confusion
+- [ ] Sign extension to surpress Firefox warning
+
 ## Development
 
 Clone repository and setup development environment with npm:
 
 ```sh
-git clone https://github.com/tumpio/requestcontrol.git
+git clone https://github.com/Vinfall/requestcontrol.git
 cd requestcontrol
 npm i
 ```
