@@ -14,11 +14,22 @@ import {
     ThirdPartyDomainMatcher,
     ThirdPartyOriginMatcher,
 } from "./matchers.js";
-import { BlockRule } from "./rules/block.js";
-import { FilterRule } from "./rules/filter.js";
-import { RedirectRule } from "./rules/redirect.js";
-import { SecureRule } from "./rules/secure.js";
-import { LoggedWhitelistRule, WhitelistRule } from "./rules/whitelist.js";
+import {
+    BlockRule
+} from "./rules/block.js";
+import {
+    FilterRule
+} from "./rules/filter.js";
+import {
+    RedirectRule
+} from "./rules/redirect.js";
+import {
+    SecureRule
+} from "./rules/secure.js";
+import {
+    LoggedWhitelistRule,
+    WhitelistRule
+} from "./rules/whitelist.js";
 
 export const ALL_URLS = "<all_urls>";
 
@@ -31,15 +42,13 @@ export function createRequestFilters(data) {
         return createAnyTldRequestFilters(data);
     }
 
-    return [
-        {
-            rule: createRule(data),
-            urls: createMatchPatterns(data.pattern),
-            matcher: createRequestMatcher(data.pattern),
-            types: data.types,
-            incognito: data.pattern.incognito,
-        },
-    ];
+    return [{
+        rule: createRule(data),
+        urls: createMatchPatterns(data.pattern),
+        matcher: createRequestMatcher(data.pattern),
+        types: data.types,
+        incognito: data.pattern.incognito,
+    }, ];
 }
 
 export function createRequestMatcher(pattern, hostnamesWithoutSuffix = []) {
