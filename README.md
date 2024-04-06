@@ -62,6 +62,7 @@ Build extension:
 
 ```sh
 npm run build
+npm run lint-build
 ```
 
 ## External Libraries
