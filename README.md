@@ -1,6 +1,6 @@
 [![BuildStatus](https://github.com/Vinfall/reqon/workflows/Build/badge.svg?event=push&branch=master)](https://github.com/Vinfall/reqon/actions)
 
-# Reqon (fork of *Request Control*)
+# Reqon (fork of *[Request Control](https://github.com/tumpio/requestcontrol)*)
 
 An extension to control HTTP requests. Provides front-end for Firefox
 [webRequest.onBeforeRequest](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/API/webRequest/onBeforeRequest)
