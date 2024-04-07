@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.5.2] - Apr. 7, 2024
+- Squash on latest submodule version.
+- Fix eslint error.
+
 ## [3.4.1] - Apr. 6, 2024
 - Rename to reqon.
 - Fix jest test error.
