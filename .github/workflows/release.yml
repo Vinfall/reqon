@@ -22,18 +22,23 @@ jobs:
       - run: npm run build
       - run: npm run lint-build
 
-      - uses: ffurrer2/extract-release-notes@v1
+      - uses: ffurrer2/extract-release-notes@v2
         id: extract_notes
 
-      - uses: softprops/action-gh-release@v1
+      - name: upload artifact to release
+        uses: ncipollo/release-action@v1
         with:
-          files: web-ext-artifacts/*.zip
+          allowUpdates: True
+          tag: ${{ github.ref_name }}
           body: ${{ steps.extract_notes.outputs.release_notes }}
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          omitNameDuringUpdate: True
+          artifacts: "web-ext-artifacts/*.zip"
+          token: ${{ secrets.GITHUB_TOKEN }}
 
-      - run: npm run deploy
-        env:
-          WEB_EXT_CHANNEL: listed
-          WEB_EXT_API_KEY: ${{ secrets.WEB_EXT_API_KEY }}
-          WEB_EXT_API_SECRET: ${{ secrets.WEB_EXT_API_SECRET }}
+      # TODO: get AMO credentials to enable this
+      # https://extensionworkshop.com/documentation/develop/getting-started-with-web-ext/
+      # - run: npm run deploy
+      #   env:
+      #     WEB_EXT_CHANNEL: listed
+      #     WEB_EXT_API_KEY: ${{ secrets.WEB_EXT_API_KEY }}
+      #     WEB_EXT_API_SECRET: ${{ secrets.WEB_EXT_API_SECRET }}
