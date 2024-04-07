@@ -30,7 +30,7 @@ Other useful information:
 
 - [ ] Update packages & fix vulnerabilities (WIP)
 - [ ] Remove deprecated packages & move to alternatives
-- [ ] Rebase on latest submodules
+- [x] Rebase on latest submodules
 - [ ] Merge more PR
 - [ ] Rebrand to avoid confusion (WIP)
 - [ ] Sign extension to surpress Firefox warning
