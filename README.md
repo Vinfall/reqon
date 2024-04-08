@@ -19,6 +19,14 @@ Other useful information:
 - [Source code](https://github.com/Vinfall/reqon)
 - [License](./LICENSE)
 
+## Installation
+
+1. Open `about:addons`
+2. Click on the gear icon (⚙️)
+3. Click `Install Add-on From File...`
+4. Select the zip you downloaded from [releases](https://github.com/Vinfall/reqon/releases/latest)
+5. Now you are good to go! Open options to check if rules are kept and test the functionality
+
 ## Support
 
 - Bug Report
