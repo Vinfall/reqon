@@ -15,7 +15,7 @@ Requests can be controlled with following rules:
 
 Other useful information:
 - [Manual](https://github.com/Vinfall/reqon/blob/master/_locales/en/manual.wiki)
-- [FAQ](https://github.com/Vinfall/reqon/issues?utf8=%E2%9C%93&q=label%3Aquestion+)
+- [Community-maintained ruleset](https://github.com/Vinfall/reqon-rules)
 - [Source code](https://github.com/Vinfall/reqon)
 - [License](./LICENSE)
 
@@ -25,6 +25,7 @@ Other useful information:
 - Feature Suggestion
 - Localization
 - Code Contribution
+- Rule Contribution
 
 ## Development
 

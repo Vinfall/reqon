@@ -6,6 +6,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.5.3] - Apr. 8, 2024
+- Update Spanish translation.
+
 ## [3.5.2] - Apr. 7, 2024
 - Squash on latest submodule version.
 - Fix eslint error.
