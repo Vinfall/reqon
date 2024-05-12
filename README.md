@@ -1,4 +1,4 @@
-[![BuildStatus](https://github.com/Vinfall/reqon/workflows/Build/badge.svg?event=push&branch=master)](https://github.com/Vinfall/reqon/actions)
+[![BuildStatus](https://github.com/Vinfall/reqon/actions/workflows/build.yml/badge.svg?event=push&branch=master)](https://github.com/Vinfall/reqon/actions)
 
 # Reqon (fork of *[Request Control](https://github.com/tumpio/requestcontrol)*)
 
