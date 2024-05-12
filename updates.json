@@ -1,0 +1,24 @@
+{
+  "addons": {
+    "{5394599d-e504-4e49-806c-3ba6cd4060c4}": {
+      "updates": [
+        {
+          "version": "3.5.2",
+          "update_link": "https://github.com/Vinfall/reqon/releases/download/v3.5.2/reqon-3.5.2.zip"
+        },
+        {
+          "version": "3.5.3",
+          "update_link": "https://github.com/Vinfall/reqon/releases/download/v3.5.3/reqon-3.5.3.zip"
+        },
+        {
+          "version": "3.5.4",
+          "update_link": "https://github.com/Vinfall/reqon/releases/download/v3.5.4/reqon-3.5.4.zip"
+        },
+        {
+          "version": "3.5.6",
+          "update_link": "https://github.com/Vinfall/reqon/releases/download/v3.5.4/reqon-3.5.6.zip"
+        }
+      ]
+    }
+  }
+}

@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.5.6] - May. 12, 2024
+- Finish migration of extension name.
+- Enable updates.
+
 ## [3.5.4] - May. 7, 2024
 - Bump dependencies.
 
