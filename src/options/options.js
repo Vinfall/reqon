@@ -2,16 +2,34 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
-import { exportObject, importFile } from "../util/import-export.js";
-import { Toc } from "../util/toc.js";
-import { uuid } from "../util/uuid.js";
-import { showAlertPopup } from "./alert-popup.js";
-import { showChangelog } from "./changelog-dialog.js";
-import { OPTION_CHANGE_ICON, OPTION_SHOW_COUNTER } from "./constants.js";
-import { showRuleTestDialog } from "./rule-tester.js";
+import {
+    exportObject,
+    importFile
+} from "../util/import-export.js";
+import {
+    Toc
+} from "../util/toc.js";
+import {
+    uuid
+} from "../util/uuid.js";
+import {
+    showAlertPopup
+} from "./alert-popup.js";
+import {
+    showChangelog
+} from "./changelog-dialog.js";
+import {
+    OPTION_CHANGE_ICON,
+    OPTION_SHOW_COUNTER
+} from "./constants.js";
+import {
+    showRuleTestDialog
+} from "./rule-tester.js";
 
 document.addEventListener("DOMContentLoaded", async () => {
-    const { rules } = await browser.storage.local.get("rules");
+    const {
+        rules
+    } = await browser.storage.local.get("rules");
 
     if (rules) {
         createRuleInputs(rules);
@@ -34,7 +52,9 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     document.getElementById("exportRules").addEventListener("click", async () => {
         const fileName = browser.i18n.getMessage("export-file-name");
-        const { rules } = await browser.storage.local.get("rules");
+        const {
+            rules
+        } = await browser.storage.local.get("rules");
         exportObject(fileName, rules);
     });
 
@@ -63,11 +83,15 @@ document.addEventListener("DOMContentLoaded", async () => {
         });
 
     optionShowCounter.addEventListener("change", function () {
-        browser.storage.local.set({ [OPTION_SHOW_COUNTER]: this.checked });
+        browser.storage.local.set({
+            [OPTION_SHOW_COUNTER]: this.checked
+        });
     });
 
     optionChangeIcon.addEventListener("change", function () {
-        browser.storage.local.set({ [OPTION_CHANGE_ICON]: this.checked });
+        browser.storage.local.set({
+            [OPTION_CHANGE_ICON]: this.checked
+        });
     });
 
     document.getElementById("exportSelectedRules").addEventListener("click", async () => {
@@ -78,10 +102,14 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     document.getElementById("removeSelectedRules").addEventListener("click", async () => {
         const selected = new Set(getSelectedRules().map((rule) => rule.uuid));
-        const { rules } = await browser.storage.local.get("rules");
+        const {
+            rules
+        } = await browser.storage.local.get("rules");
 
         if (rules) {
-            await browser.storage.local.set({ rules: rules.filter((rule) => !selected.has(rule.uuid)) });
+            await browser.storage.local.set({
+                rules: rules.filter((rule) => !selected.has(rule.uuid))
+            });
         }
 
         document.querySelectorAll("rule-list").forEach((list) => list.removeSelected());
@@ -115,24 +143,35 @@ document.addEventListener("DOMContentLoaded", async () => {
 });
 
 document.addEventListener("rule-created", async (e) => {
-    const { rule } = e.detail;
+    const {
+        rule
+    } = e.detail;
 
-    let { rules } = await browser.storage.local.get("rules");
+    let {
+        rules
+    } = await browser.storage.local.get("rules");
 
     if (!rules) {
         rules = [];
     }
     rules.push(rule);
 
-    await browser.storage.local.set({ rules });
+    await browser.storage.local.set({
+        rules
+    });
 
     document.getElementById(rule.action).addCreated(rule);
 });
 
 document.addEventListener("rule-changed", async (e) => {
-    const { input, rule } = e.detail;
+    const {
+        input,
+        rule
+    } = e.detail;
 
-    let { rules } = await browser.storage.local.get("rules");
+    let {
+        rules
+    } = await browser.storage.local.get("rules");
 
     if (!rules) {
         rules = [];
@@ -146,16 +185,22 @@ document.addEventListener("rule-changed", async (e) => {
         rules.push(rule);
     }
 
-    await browser.storage.local.set({ rules });
+    await browser.storage.local.set({
+        rules
+    });
 
     input.toggleSaved();
 });
 
 document.addEventListener("rule-deleted", async (e) => {
     const deleted = e.detail.uuid;
-    const { rules } = await browser.storage.local.get("rules");
+    const {
+        rules
+    } = await browser.storage.local.get("rules");
     if (rules) {
-        await browser.storage.local.set({ rules: rules.filter((rule) => rule.uuid !== deleted) });
+        await browser.storage.local.set({
+            rules: rules.filter((rule) => rule.uuid !== deleted)
+        });
     }
     updateToolbar();
     toggleEmpty();
@@ -170,7 +215,9 @@ document.addEventListener("rule-import-deleted", onImportSourceDeleted);
 document.addEventListener("rule-import-delete-imported", onRemoveImportedRules);
 
 document.addEventListener("rule-import-show-imported", (e) => {
-    const { uuids } = e.target.data.imported;
+    const {
+        uuids
+    } = e.target.data.imported;
     uuids.forEach((uuid) => {
         const input = document.querySelector(`[data-uuid="${uuid}"`);
         if (input) {
@@ -185,7 +232,9 @@ document.addEventListener("rule-import-show-imported", (e) => {
 
 document.addEventListener("rule-import-import-list", async (e) => {
     const input = e.target;
-    let { imports } = await browser.storage.local.get("imports");
+    let {
+        imports
+    } = await browser.storage.local.get("imports");
     const src = input.getAttribute("src");
     const rulesToImport = input.rules.filter((rule) => rule.uuid);
     const uuids = rulesToImport.map((rule) => rule.uuid);
@@ -201,11 +250,15 @@ document.addEventListener("rule-import-import-list", async (e) => {
     const data = imports[src];
 
     if (data.imported && data.imported.uuids) {
-        const { rules } = await browser.storage.local.get("rules");
+        const {
+            rules
+        } = await browser.storage.local.get("rules");
 
         if (rules) {
             const removed = new Set(data.imported.uuids.filter((uuid) => !uuids.includes(uuid)));
-            await browser.storage.local.set({ rules: rules.filter((rule) => !removed.has(rule.uuid)) });
+            await browser.storage.local.set({
+                rules: rules.filter((rule) => !removed.has(rule.uuid))
+            });
         }
     }
 
@@ -218,12 +271,16 @@ document.addEventListener("rule-import-import-list", async (e) => {
         timestamp: Date.now(),
     };
 
-    await browser.storage.local.set({ imports });
+    await browser.storage.local.set({
+        imports
+    });
     input.data = imports[src];
 });
 
 async function setupImportsTab() {
-    const { imports } = await browser.storage.local.get("imports");
+    const {
+        imports
+    } = await browser.storage.local.get("imports");
 
     if (imports) {
         Object.entries(imports).forEach(([src, data]) => {
@@ -243,7 +300,9 @@ async function setupImportsTab() {
 }
 
 async function checkImportSourceValidity() {
-    const { imports } = await browser.storage.local.get("imports");
+    const {
+        imports
+    } = await browser.storage.local.get("imports");
     const input = document.getElementById("new-import-source");
     const duplicate = document.querySelector(`rule-import-input[src="${input.value}"]`);
 
@@ -257,14 +316,20 @@ async function checkImportSourceValidity() {
 async function onImportSourceAdded(e) {
     e.preventDefault();
     const src = this.src.value;
-    let { imports } = await browser.storage.local.get("imports");
+    let {
+        imports
+    } = await browser.storage.local.get("imports");
 
     if (!imports) {
         imports = {};
     }
 
-    imports[src] = { deletable: true };
-    await browser.storage.local.set({ imports });
+    imports[src] = {
+        deletable: true
+    };
+    await browser.storage.local.set({
+        imports
+    });
 
     createImportInput(src, imports[src]);
     this.reset();
@@ -274,7 +339,9 @@ async function onImportSourceAdded(e) {
 async function onImportSourceDeleted(e) {
     const input = e.target;
     const src = input.getAttribute("src");
-    const { imports } = await browser.storage.local.get("imports");
+    const {
+        imports
+    } = await browser.storage.local.get("imports");
 
     if (!imports || !(src in imports)) {
         return;
@@ -282,7 +349,9 @@ async function onImportSourceDeleted(e) {
 
     delete imports[src];
 
-    await browser.storage.local.set({ imports });
+    await browser.storage.local.set({
+        imports
+    });
 
     input.remove();
     checkImportSourceValidity();
@@ -291,23 +360,37 @@ async function onImportSourceDeleted(e) {
 
 async function onRemoveImportedRules(e) {
     const input = e.target;
-    const { rules } = await browser.storage.local.get("rules");
+    const {
+        rules
+    } = await browser.storage.local.get("rules");
 
     if (rules) {
-        const { uuids } = input.data.imported;
-        const newRules = rules.filter(({ uuid }) => !uuids.includes(uuid));
-        await browser.storage.local.set({ rules: newRules });
+        const {
+            uuids
+        } = input.data.imported;
+        const newRules = rules.filter(({
+            uuid
+        }) => !uuids.includes(uuid));
+        await browser.storage.local.set({
+            rules: newRules
+        });
         document.querySelectorAll("rule-list").forEach((list) => list.removeAll());
         createRuleInputs(newRules);
     }
     const src = input.getAttribute("src");
-    const { imports } = await browser.storage.local.get("imports");
+    const {
+        imports
+    } = await browser.storage.local.get("imports");
 
     if (imports && src in imports) {
-        const { data } = input;
+        const {
+            data
+        } = input;
         delete data.imported;
         imports[src] = data;
-        browser.storage.local.set({ imports });
+        browser.storage.local.set({
+            imports
+        });
     }
     input.data = {};
 }
@@ -328,7 +411,10 @@ function toggleImportSelectedButton() {
 }
 
 function onRuleEditCompleted(e) {
-    const { action, input } = e.detail;
+    const {
+        action,
+        input
+    } = e.detail;
     if (action !== this.id) {
         document.getElementById(action).addFrom(input);
     }
@@ -345,7 +431,9 @@ function getSelectedRules() {
 }
 
 async function importRules(imported) {
-    let { rules } = await browser.storage.local.get("rules");
+    let {
+        rules
+    } = await browser.storage.local.get("rules");
 
     if (!rules) {
         rules = [];
@@ -356,7 +444,9 @@ async function importRules(imported) {
     try {
         document.querySelectorAll("rule-list").forEach((list) => list.removeAll());
         createRuleInputs(rules);
-        await browser.storage.local.set({ rules });
+        await browser.storage.local.set({
+            rules
+        });
 
         document.querySelectorAll("rule-list").forEach((list) => {
             list.mark(newRules, "new");
