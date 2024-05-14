@@ -49,11 +49,13 @@
     {
         "title": "Skip Mozilla's outgoing link redirection service",
         "uuid": "3c4d6fa0-e2fb-4079-b3f0-e453ebe289afalsee",
+        "description": "Filter rule to skip and prevent redirection tracking on Mozilla website.",
         "tag": "privacy-redirectors",
         "pattern": {
             "scheme": "*",
             "host": [
-                "outgoing.prod.mozaws.net"
+                "outgoing.prod.mozaws.net",
+                "prod.outgoing.prod.webservices.mozgcp.net"
             ],
             "path": [
                 "*"
