@@ -412,7 +412,7 @@
     "message": "返回顶层"
   },
   "export-file-name": {
-    "message": "reqon-rules.json"
+    "message": "reqon规则"
   },
   "export_selected": {
     "message": "导出选中"
