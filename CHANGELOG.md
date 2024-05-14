@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.5.5a1] - May. 14, 2024
+- Bump dependencies.
+- Add prod.outgoing.prod.webservices.mozgcp.net pattern.
+
 ## [3.5.4] - May. 7, 2024
 - Bump dependencies.
 
