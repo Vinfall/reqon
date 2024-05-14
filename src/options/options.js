@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     document.getElementById("exportRules").addEventListener("click", async () => {
         const baseFileName = browser.i18n.getMessage("export-file-name");
         // ISO date suffix like `20240514`
-        const isoDateSuffix = date.toISOString().split('T')[0].replace(/-/g, '');
+        const isoDateSuffix = new Date().toISOString().split("T")[0].replace(/-/g, "");
         const fileName = baseFileName + isoDateSuffix;
         const {
             rules
@@ -99,7 +99,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     document.getElementById("exportSelectedRules").addEventListener("click", async () => {
         const baseFileName = browser.i18n.getMessage("export-file-name");
-        const isoDateSuffix = date.toISOString().split('T')[0].replace(/-/g, '');
+        const isoDateSuffix = new Date().toISOString().split("T")[0].replace(/-/g, "");
         const fileName = baseFileName + isoDateSuffix;
         const selected = getSelectedRules();
         exportObject(fileName, selected);
