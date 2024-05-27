@@ -27,7 +27,7 @@
     "@ajusa/lit": "^1.1.0",
     "body-parser": "^1.20.2",
     "express": "^4.19.2",
-    "tldts-experimental": "^6.1.21"
+    "tldts-experimental": "^6.1.22"
   },
   "devDependencies": {
     "addons-linter": "^6.27.0",
