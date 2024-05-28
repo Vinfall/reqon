@@ -82,11 +82,10 @@
       "simple-import-sort"
     ],
     "overrides": [
-    {
       "files": ["*.json"],
       "plugins": ["json"],
       "extends": ["plugin:json/recommended"]
-    }],
+    ],
     "rules": {
       "indent": [
         "warn",
