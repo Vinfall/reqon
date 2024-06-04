@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.5.6] - Jun. 4, 2024
+- Bump dependencies.
+- Add iso date suffix to exported filename.
+
 ## [3.5.5] - May. 14, 2024
 - Bump dependencies.
 - Add prod.outgoing.prod.webservices.mozgcp.net pattern.
