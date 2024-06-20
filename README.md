@@ -1,6 +1,10 @@
+# Reqon (fork of *[Request Control](https://github.com/tumpio/requestcontrol)*)
+
 [![BuildStatus](https://github.com/Vinfall/reqon/actions/workflows/build.yml/badge.svg?event=push&branch=master)](https://github.com/Vinfall/reqon/actions)
 
-# Reqon (fork of *[Request Control](https://github.com/tumpio/requestcontrol)*)
+> [!tip]
+> This is maintained at a minimum scale.
+> I posted a few things you should know before trying in the original repo, it's suggested to check [issue#109](https://github.com/tumpio/requestcontrol/issues/109#issuecomment-2041932472) first.
 
 An extension to control HTTP requests. Provides front-end for Firefox
 [webRequest.onBeforeRequest](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/API/webRequest/onBeforeRequest)
@@ -68,7 +72,6 @@ npm run lint-build
 ## External Libraries
 
 Reqon uses the following external libraries:
-
 - [lit](https://ajusa.github.io/lit/) is licensed under the MIT license.
 - [tags-input](https://github.com/developit/tags-input) and its fork by [\@pirxpilot](https://github.com/pirxpilot/tags-input) are licensed under the MIT license.
 - [ionicons](http://ionicons.com/) is licensed under the MIT license.
