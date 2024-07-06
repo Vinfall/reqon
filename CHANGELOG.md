@@ -6,6 +6,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.5.7] - Jul. 6, 2024
+- Bump dependencies.
+
 ## [3.5.6] - Jun. 4, 2024
 - Bump dependencies.
 - Add iso date suffix to exported filename.
@@ -77,7 +80,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Accept text files on import.
 
 ## [1.13.2] - Aug 19, 2019
-- Fix comma not accepeted in includes/excludes input fields. #105
+- Fix comma not accepted in includes/excludes input fields. #105
 - Fix hosts/paths input field overflow issue with long list of values. #104
 
 ## [1.13.1] - Aug 10, 2019
