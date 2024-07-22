@@ -30,7 +30,7 @@
     "tldts-experimental": "^6.1.31"
   },
   "devDependencies": {
-    "addons-linter": "^6.31.1",
+    "addons-linter": "^6.32.1",
     "eslint": "^7.32.0",
     "eslint-config-problems": "^5.0.0",
     "eslint-plugin-import": "^2.29.1",
