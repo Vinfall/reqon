@@ -2,9 +2,14 @@
 
 [![BuildStatus](https://github.com/Vinfall/reqon/actions/workflows/build.yml/badge.svg?event=push&branch=master)](https://github.com/Vinfall/reqon/actions)
 
-> [!tip]
-> This is maintained at a minimum scale.
-> I posted a few things you should know before trying in the original repo, it's suggested to check [issue#109](https://github.com/tumpio/requestcontrol/issues/109#issuecomment-2041932472) first.
+> [!warning]
+> This is no longer maintained ~~at a minimum scale~~.
+> If you insist, I posted a few things you should know in the original repo, it's suggested to check [issue#109](https://github.com/tumpio/requestcontrol/issues/109#issuecomment-2041932472) first.
+
+> [!note]
+> For potential future maintainers, you'd better solve [these bugs in issue trackers](https://github.com/Vinfall/reqon/issues?q=is%3Aissue+is%3Aopen+label%3Abug) first before going on. [issue#53](https://github.com/Vinfall/reqon/issues/53) is introduced in my fork and (probably) does not exist in [legacy](https://github.com/Vinfall/reqon/releases/tag/legacy) release.
+> You can either start here or [softfork branch](https://github.com/Vinfall/reqon/tree/softfork) when things are still clean.
+> You should also cherry-pick my CI commits and [commit@49111d3](https://github.com/Vinfall/reqon/commit/49111d3972ee927199bd34c70cb900b34c2baa78).
 
 An extension to control HTTP requests. Provides front-end for Firefox
 [webRequest.onBeforeRequest](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/API/webRequest/onBeforeRequest)
